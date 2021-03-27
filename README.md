@@ -1,4 +1,4 @@
-# story-estimate
+# var-user-story-estimate
 
 ## Project setup
 ```
