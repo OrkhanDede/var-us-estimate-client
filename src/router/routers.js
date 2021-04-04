@@ -5,7 +5,7 @@ import AppScreen from '../pages/AppScreen';
 
 export const routes = [
     { path: '/', component: MainScreen },
-    { path: '/app', component: AppScreen },
+    { path: '/app/:id', name: "app", component: AppScreen },
     { path: '/user', component: UserScreen },
     { path: '/host', component: HostScreen }
 ];

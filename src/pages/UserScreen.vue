@@ -93,13 +93,12 @@
             <div class="selected-user">
               <!-- settings -->
               <div class="col-lg-12 settings-icons">
-               
                 <div class="setting">
                   <font-awesome-icon icon="cog" />
                 </div>
               </div>
             </div>
-            <div class="row" style="display: none">
+            <div class="row" style="">
               <div class="my-flex">
                 <div class="col-md-3 digit-box height-100">
                   <span>1</span>
@@ -130,7 +129,7 @@
                 </div>
               </div>
             </div>
-            <div class="row" style="display: none">
+            <div class="row" style="">
               <div class="my-flex-center">
                 <div class="single-box">
                   <span class="close">X</span>
@@ -139,7 +138,7 @@
                 </div>
               </div>
             </div>
-            <div class="my-flex-center" style="display: none">
+            <div class="my-flex-center" style="">
               <p class="please-wait-text">
                 Please wait for the host to start the session
               </p>
@@ -236,11 +235,31 @@
     </div>
   </div>
 </template>
-    <script>
-export default {};
+<script>
+
+export default {
+  
+  created() {
+    // window.addEventListener("beforeunload", (event) => {
+    //   // Cancel the event as stated by the standard.
+    //   event.preventDefault();
+    //   // Chrome requires returnValue to be set.
+    //   event.returnValue = "";
+    //   alert(1);
+    // });
+  },
+  computed: {
+    // Compares cached user data to live data
+    hasChanged() {
+      return true;
+    },
+  },
+  methods: {
+    handleClose: function () {},
+  },
+};
 </script>
   
   
 <style scoped>
-
 </style>
